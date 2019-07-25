@@ -191,6 +191,18 @@ int stm32_adc_setup(void);
 #endif
 
 /************************************************************************************
+ * Name: stm32_bbsram_int
+ *
+ * Description:
+ *   Initialize bbsram driver.
+ *
+ ************************************************************************************/
+
+#ifdef CONFIG_STM32H7_BBSRAM
+int stm32_bbsram_int(void);
+#endif
+
+/************************************************************************************
  * Name: stm32_usbinitialize
  *
  * Description:

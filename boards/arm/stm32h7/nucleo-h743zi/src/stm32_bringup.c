@@ -160,6 +160,12 @@ int stm32_bringup(void)
     }
 #endif  /* CONFIG_FS_PROCFS */
 
+  #ifdef CONFIG_STM32H7_BBSRAM
+  /* Initialize battery-backed RAM */
+
+  (void)stm32_bbsram_int();
+#endif
+
 #ifdef CONFIG_BUTTONS
   /* Register the BUTTON driver */
 
